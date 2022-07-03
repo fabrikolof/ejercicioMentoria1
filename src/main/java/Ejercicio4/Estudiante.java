@@ -2,22 +2,22 @@ package Ejercicio4;
 
 import java.util.Random;
 
-public class Profesor extends Persona{
-    String materia;
+public class Estudiante extends Persona {
+    int nota;
 
-    public Profesor(String nombre, char sexo, int edad, String materia) {
+    public Estudiante(String nombre, char sexo, int edad, int nota) {
         super(nombre, sexo, edad);
-        this.materia = materia;
+        this.nota = nota;
     }
 
     @Override
     public boolean disponibilidad() {
         int a = new Random().nextInt(10);
-        if (a < 8) {
-            // 80% chance
+        if (a < 4) {
+            // 50% chance
             return true;
         } else {
-            // 20% chance
+            // 50% chance
             return false;
         }
     }
